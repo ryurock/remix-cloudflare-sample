@@ -1,0 +1,26 @@
+{
+  "name": "@sample-workers/content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "remix build",
+    "deploy:dev": "npm run build && wrangler publish --config wrangler.dev.toml --env dev",
+    "dev:wrangler": "wrangler dev --config wrangler.dev.toml --env dev --local",
+    "dev:app": "remix watch",
+    "dev": "run-p dev:wrangler dev:app",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryurock/remix-cloudflare-workers-module-worker-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryurock/remix-cloudflare-workers-module-worker-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ryurock/remix-cloudflare-workers-module-worker-boilerplate#readme"
+}

@@ -39,6 +39,7 @@
     "node": ">=16.13.0"
   },
   "workspaces": [
-    "packages/components"
+    "packages/components",
+    "services/content"
   ]
 }
