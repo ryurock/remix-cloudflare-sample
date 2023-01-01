@@ -1,19 +1,11 @@
-import { json } from '@remix-run/cloudflare';
-import { useLoaderData } from '@remix-run/react';
-import type { LoaderFunction } from '~/types';
-
-export const loader: LoaderFunction = ({ context: { env } }) => {
-  const secret = env.SESSION_SECRET;
-  return json({ secret });
-};
+import { Header } from '@sample-workers/components/src/Header';
 
 export default function Index() {
-  const { secret } = useLoaderData();
-
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
+      {/* 追加 */}
+      <Header />
       <h1>Welcome to Remix</h1>
-      <h2>SessionSecret: {secret}</h2>
       <ul>
         <li>
           <a

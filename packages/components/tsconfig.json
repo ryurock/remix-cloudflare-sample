@@ -1,5 +1,5 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "isolatedModules": true,
@@ -12,10 +12,8 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "skipLibCheck": true,
     "paths": {
-      "~/*": ["./app/*"],
-      "@sample-workers/*": ["./packages/*"]
+      "@sample-workers/*": ["../packages/*"]
     },
 
     // Remix takes care of building everything in `remix build`.
